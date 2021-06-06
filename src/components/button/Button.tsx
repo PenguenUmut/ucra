@@ -1,12 +1,12 @@
 import React from 'react';
-import classes from './Button.module.css';
+import styles from './Button.module.scss';
 
 interface IButton {
   text: string;
 }
 
 const Button: React.FC<IButton> = ({ text }) => {
-  return <button className={classes.primary}>{text}</button>;
+  return <button className={styles.primary}>{text}</button>;
 };
 
 export default Button;
