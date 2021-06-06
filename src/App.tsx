@@ -1,15 +1,18 @@
 import React from 'react';
-import Button from './components/button/Button';
-import Label from './components/Label/Label';
+import { Button } from './components/Button/Button';
+import { Header } from './components/Header/Header';
 
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Button text="Click Me!" />
-      <br />
-      <Label text="Tag1" />
+      <Header
+        onLogin={() => {}}
+        onLogout={() => {}}
+        onCreateAccount={() => {}}
+      />
+      <Button label="Click Me!" />
     </div>
   );
 }
