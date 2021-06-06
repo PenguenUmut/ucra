@@ -27,30 +27,13 @@ export interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-export const Button: React.FC<ButtonProps> = ({
-  primary = false,
-  size = 'medium',
-  backgroundColor,
-  label,
-  ...props
-}) => {
+export const Button: React.FC<ButtonProps> = ({ primary = false, size = 'medium', backgroundColor, label, ...props }) => {
   const classes = [styles.button];
   classes.push(primary ? styles.buttonPrimary : styles.buttonSecondary);
-  classes.push(
-    size === 'small'
-      ? styles.buttonSmall
-      : size === 'large'
-      ? styles.buttonLarge
-      : styles.buttonMedium
-  );
+  classes.push(size === 'small' ? styles.buttonSmall : size === 'large' ? styles.buttonLarge : styles.buttonMedium);
 
   return (
-    <button
-      type="button"
-      className={classes.join(' ')}
-      style={{ backgroundColor }}
-      {...props}
-    >
+    <button type="button" className={classes.join(' ')} style={{ backgroundColor }} {...props}>
       {label}
     </button>
   );
