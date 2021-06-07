@@ -7,11 +7,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Header
-        onLogin={() => {}}
-        onLogout={() => {}}
-        onCreateAccount={() => {}}
-      />
+      <Header onLogin={() => {}} onLogout={() => {}} onCreateAccount={() => {}} />
       <Button label="Click Me!" />
     </div>
   );

@@ -1,6 +1,6 @@
 module.exports = {
-  extends: ["eslint-config-react-app", "plugin:prettier/recommended"],
+  extends: ['eslint-config-react-app', 'plugin:prettier/recommended'],
   rules: {
-    "no-console": 1,
+    'no-console': 1,
   },
 };
