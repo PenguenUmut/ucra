@@ -13,24 +13,24 @@ $secondaryColor: #333;
   display: inline-block;
   line-height: 1;
 }
-.buttonPrimary {
+.primary {
   color: $primaryColor;
   background-color: $primaryBgcolor;
 }
-.buttonSecondary {
+.secondary {
   color: $secondaryColor;
   background-color: $secondaryBgcolor;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
 }
-.buttonSmall {
+.small {
   font-size: 12px;
   padding: 10px 16px;
 }
-.buttonMedium {
+.medium {
   font-size: 14px;
   padding: 11px 20px;
 }
-.buttonLarge {
+.large {
   font-size: 16px;
   padding: 12px 24px;
 }

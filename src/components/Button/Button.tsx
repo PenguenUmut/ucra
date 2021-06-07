@@ -1,4 +1,5 @@
 import React from 'react';
+import { CN } from '../className';
 import styles from './Button.module.scss';
 
 export interface ButtonProps {
@@ -28,12 +29,16 @@ export interface ButtonProps {
  * Primary UI component for user interaction
  */
 export const Button: React.FC<ButtonProps> = ({ primary = false, size = 'medium', backgroundColor, label, ...props }) => {
-  const classes = [styles.button];
-  classes.push(primary ? styles.buttonPrimary : styles.buttonSecondary);
-  classes.push(size === 'small' ? styles.buttonSmall : size === 'large' ? styles.buttonLarge : styles.buttonMedium);
+  const className = CN(styles.button, [
+    [styles.primary, primary],
+    [styles.secondary, !primary],
+    [styles.small, size === 'small'],
+    [styles.large, size === 'large'],
+    [styles.medium, size === 'medium'],
+  ]);
 
   return (
-    <button type="button" className={classes.join(' ')} style={{ backgroundColor }} {...props}>
+    <button type="button" className={className} style={{ backgroundColor }} {...props}>
       {label}
     </button>
   );
